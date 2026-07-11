@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>for her</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Caveat:wght@500;600&display=swap');
+
+  :root{
+    --dusk:#2b1f33;
+    --plum:#4a3358;
+    --mauve:#a98aa8;
+    --blush:#e8c9c0;
+    --cream:#f6ede8;
+    --gold:#c9a15a;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  body{
+    background:
+      radial-gradient(circle at 20% 10%, rgba(169,138,168,0.25), transparent 45%),
+      radial-gradient(circle at 80% 90%, rgba(201,161,90,0.12), transparent 40%),
+      var(--dusk);
+    color:var(--cream);
+    font-family:'Cormorant Garamond', serif;
+    min-height:100vh;
+    overflow-x:hidden;
+  }
+
+  .stars{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    opacity:0.5;
+    background-image:
+      radial-gradient(1px 1px at 10% 20%, white, transparent),
+      radial-gradient(1px 1px at 80% 15%, white, transparent),
+      radial-gradient(1px 1px at 50% 60%, white, transparent),
+      radial-gradient(2px 2px at 30% 80%, white, transparent),
+      radial-gradient(1px 1px at 90% 70%, white, transparent),
+      radial-gradient(1px 1px at 65% 35%, white, transparent);
+    background-size:600px 600px;
+    animation: drift 90s linear infinite;
+  }
+  @keyframes drift{
+    from{background-position:0 0;}
+    to{background-position:-600px 600px;}
+  }
+
+  main{
+    position:relative;
+    z-index:1;
+    max-width:760px;
+    margin:0 auto;
+    padding:6rem 1.75rem 5rem;
+  }
+
+  header{
+    text-align:center;
+    margin-bottom:4rem;
+  }
+
+  .eyebrow{
+    font-family:'Caveat', cursive;
+    font-size:1.4rem;
+    color:var(--mauve);
+    letter-spacing:0.02em;
+  }
+
+  h1{
+    font-weight:500;
+    font-size:clamp(2.4rem, 6vw, 4rem);
+    letter-spacing:0.01em;
+    margin-top:0.4rem;
+    color:var(--blush);
+  }
+
+  h1 em{
+    font-style:italic;
+    color:var(--gold);
+  }
+
+  .frame{
+    position:relative;
+    border-radius:4px;
+    overflow:hidden;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(232,201,192,0.08);
+    margin-bottom:1rem;
+  }
+
+  .frame img, .frame video{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+
+  .caption{
+    text-align:center;
+    font-family:'Caveat', cursive;
+    font-size:1.3rem;
+    color:var(--mauve);
+    margin-bottom:4rem;
+  }
+
+  .divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:0.75rem;
+    margin:3rem 0;
+    color:var(--gold);
+  }
+  .divider::before, .divider::after{
+    content:'';
+    height:1px;
+    width:60px;
+    background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .letter{
+    background:rgba(246,237,232,0.03);
+    border:1px solid rgba(232,201,192,0.12);
+    border-radius:6px;
+    padding:2.75rem 2.5rem;
+    font-size:1.3rem;
+    line-height:1.8;
+    color:var(--cream);
+  }
+
+  .letter p{
+    margin-bottom:1.25rem;
+  }
+
+  .letter p:last-child{
+    margin-bottom:0;
+  }
+
+  .signoff{
+    font-family:'Caveat', cursive;
+    font-size:1.8rem;
+    color:var(--gold);
+    margin-top:1.5rem;
+    display:block;
+  }
+
+  footer{
+    text-align:center;
+    margin-top:4rem;
+    font-size:0.95rem;
+    color:rgba(232,201,192,0.4);
+    letter-spacing:0.03em;
+  }
+
+  @media (max-width:520px){
+    .letter{padding:2rem 1.4rem;}
+    main{padding:4rem 1.25rem 3.5rem;}
+  }
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<main>
+
+  <header>
+    <div class="eyebrow">a small corner of the internet, just for you</div>
+    <h1>you, on <em>repeat</em></h1>
+  </header>
+
+  <!-- Replace photo.jpg with your own image file, kept in the same folder as this page -->
+  <div class="frame">
+    <img src="photo.jpg" alt="a photo of her">
+  </div>
+  <p class="caption">this smile, still my favorite thing on this earth</p>
+
+  <!-- Replace video.mp4 with your own video file, kept in the same folder as this page -->
+  <div class="frame">
+    <video src="video.mp4" controls playsinline loop></video>
+  </div>
+  <p class="caption">and here's the proof it's not just a photo, it's really you</p>
+
+  <div class="divider">✦</div>
+
+  <section class="letter">
+    <p>I've rewritten this about five times and none of the versions felt honest enough, so here's the plain one.</p>
+    <p>I was mean to you yesterday. I picked a fight over something that, looking back, didn't deserve the energy I gave it, and I said things in a tone you didn't deserve to hear. You weren't the problem. I was just being stubborn and short-tempered, and I took it out on you instead of just talking like a normal person.</p>
+    <p>I keep looking at this photo and this video because they're from a day when I wasn't busy being difficult, and I miss being that version of myself with you. You have this way of laughing at my dumb jokes that makes me feel like I'm the funniest person alive, and yesterday I didn't deserve that laugh at all.</p>
+    <p>I'm sorry. Not the quick kind of sorry I mumble to end an argument, but the kind where I actually mean it and I'm going to try harder to not do that again. You put up with a lot from me, and yesterday I made it harder than it needed to be.</p>
+    <p>Thank you for still being here while I figure out how to argue like a decent human being. I don't deserve you on my worst days, but I'm grateful you stick around anyway.</p>
+    <span class="signoff">yours, always</span>
+  </section>
+
+  <footer>made with way too much overthinking, and no regrets</footer>
+
+</main>
+</body>
+</html>
